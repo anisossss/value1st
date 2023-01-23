@@ -3,6 +3,8 @@ body {
    padding: 0;
    margin: 0;
    font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+
 }
 
 * {
@@ -14,9 +16,10 @@ body {
  .btn {
   cursor: pointer;
   text-align: center;
-  padding: 1em;
+  padding: 0.8em;
+  width: 6em;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 15px;
   transition: all 0.2s;
   font-weight: 500;
   color: rgba(255,255,255,0.9);

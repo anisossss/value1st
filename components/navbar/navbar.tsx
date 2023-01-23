@@ -31,12 +31,13 @@ export const Nav = () => {
 
    return (
      <Navbar
-       isBordered
        variant="sticky"
        css={{
          "& .nextui-navbar-container": {
            background: "transarent",
-           borderBottom: "none",
+           border: "none",
+           height:20
+   
          },
        }}
      >
@@ -164,20 +165,11 @@ export const Nav = () => {
              </Link>
            </Navbar.CollapseItem>
          ))}
-
-         <Navbar.CollapseItem>
-           <Switch
-             shadow
-             color="warning"
-             checked={isDark}
-             onChange={(e) => setTheme(e.target.checked ? "dark" : "light")}
-           />
-         </Navbar.CollapseItem>
        </Navbar.Collapse>
        <Navbar.Content>
          <ModalLogin />
 
-         <Navbar.Item >
+         <Navbar.Item>
            <Switch
              shadow
              color="warning"
