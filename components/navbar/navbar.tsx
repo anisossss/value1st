@@ -36,7 +36,6 @@ export const Nav = () => {
          "& .nextui-navbar-container": {
            background: "transarent",
            border: "none",
-           height:20
    
          },
        }}
