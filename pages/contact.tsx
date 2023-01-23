@@ -2,7 +2,7 @@ import { Button, Divider, Grid, Text } from "@nextui-org/react";
 import React from "react";
 import { Image } from "@nextui-org/react";
 import { Flex } from "@/components/styles/flex";
-import { Meta } from "@/components/seo/Meta";
+import { Meta } from "@/components/seo";
 
 const Features = () => {
   return (

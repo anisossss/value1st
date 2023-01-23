@@ -8,7 +8,7 @@ import {Features3} from '@/components/features3';
 import {Testimonials} from '@/components/tesminonials';
 import {Statistics} from '@/components/statistics';
 import {Trial} from '@/components/trial';
-import { Meta } from '@/components/seo/Meta';
+import { Meta } from '@/components/seo';
 
 const Home: NextPage = () => {
   return (
