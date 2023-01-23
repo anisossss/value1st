@@ -177,7 +177,7 @@ export const Nav = () => {
        <Navbar.Content>
          <ModalLogin />
 
-         <Navbar.Item hideIn={"xs"}>
+         <Navbar.Item >
            <Switch
              shadow
              color="warning"
