@@ -3,17 +3,17 @@ import React from 'react';
 import { Button} from "@nextui-org/react";
 import { Image } from "@nextui-org/react";
 import { Flex } from "@/components/styles/flex";
-import { Meta } from "../components/seo/index";
+// import { Meta } from "../components/seo/index";
 
 const About = () => {
    return (
      <>
-       <Meta
+       {/* <Meta
          title="About - VALUE1ST"
          description="About our company Value1st"
          ogUrl="https://valu&st.net/about"
          thumbnail="https://i.postimg.cc/"
-       ></Meta>
+       ></Meta> */}
        <Flex
          direction={"column"}
          align={"center"}

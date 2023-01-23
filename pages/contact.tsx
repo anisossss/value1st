@@ -2,17 +2,17 @@ import { Button, Divider, Grid, Text } from "@nextui-org/react";
 import React from "react";
 import { Image } from "@nextui-org/react";
 import { Flex } from "@/components/styles/flex";
-import { Meta } from "../components/seo/index";
+// import { Meta } from "../components/seo/index";
 
 const Features = () => {
   return (
     <>
-      <Meta
+      {/* <Meta
         title="Contact - VALUE1ST"
         description="Contact us or book a free Demo at Value1st"
         ogUrl="https://valu&st.net/contact"
         thumbnail="https://i.postimg.cc"
-      ></Meta>
+      ></Meta> */}
       <Flex
         direction={"column"}
         align={"center"}

@@ -1,18 +1,18 @@
 import {Divider, Text, Grid} from '@nextui-org/react';
 import React from 'react';
 import { Flex } from "@/components/styles/flex";
-import { Meta } from "../components/seo/index";
+// import { Meta } from "../components/seo/index";
 import { Image } from "@nextui-org/react";
 
 const Services = () => {
    return (
       <>
-      <Meta
+      {/* <Meta
         title="Services - VALUE1ST"
         description="Our premium services at Value1st"
         ogUrl="https://valu&st.net/contact"
         thumbnail="https://i.postimg.cc"
-      ></Meta>
+      ></Meta> */}
       <Flex
         direction={"column"}
         align={"center"}
