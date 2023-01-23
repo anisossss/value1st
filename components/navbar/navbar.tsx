@@ -36,7 +36,6 @@ export const Nav = () => {
          "& .nextui-navbar-container": {
            background: "transarent",
            border: "none",
-   
          },
        }}
      >
@@ -170,10 +169,10 @@ export const Nav = () => {
 
          <Navbar.Item>
            <Switch
-             shadow
-             color="warning"
-             checked={isDark}
-             onChange={(e) => setTheme(e.target.checked ? "dark" : "light")}
+             css={{
+               display: "none",
+             }}
+             onChange={(e) => setTheme(e.target.checked ? "dark" : "dark")}
            />
          </Navbar.Item>
        </Navbar.Content>
