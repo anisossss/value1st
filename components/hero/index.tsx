@@ -1,16 +1,16 @@
 import {Button, Divider, Input, Text} from '@nextui-org/react';
 import React from 'react';
-import {CheckIcon} from '../icons/CheckIcon';
 import {Box} from '../styles/box';
 import {Flex} from '../styles/flex';
+import Image from 'next/image';
 
 export const Hero = () => {
    return (
       <>
          <Flex
             css={{
-               'gap': '$3',
-               'px': '$6',
+               'gap': '$24',
+               'px': '$16',
                'flexDirection': 'column',
                'alignContent': 'center',
                'justifyContent': 'center',
@@ -43,7 +43,7 @@ export const Hero = () => {
                         display: 'inline',
                      }}
                   >
-                     The modern landing page{' '}
+                    Looking to Generate More Leads and Sales {' '}
                   </Text>
                   <Text
                      h1
@@ -57,10 +57,11 @@ export const Hero = () => {
                      h1
                      css={{
                         display: 'inline',
+                         textGradient: "45deg, #FF5F1F -20%, #FF872A 50%",
                      }}
-                     color="primary"
+
                   >
-                     React developers
+                     Through Online Marketing?
                   </Text>
                </Box>
 
@@ -72,8 +73,9 @@ export const Hero = () => {
                   size={'$lg'}
                   span
                >
-                  The easiest way to build React Landing page in seconds. Save
-                  time and focus on your project.
+
+Leave It to Us.
+
                </Text>
 
                <Flex
@@ -84,43 +86,11 @@ export const Hero = () => {
                   wrap={'wrap'}
                >
                   <Input placeholder="Enter your email address" size="lg" />
-                  <Button>Start Free Trial</Button>
+
+                  <Button className='btn' 
+                   >Book a demo</Button>
                </Flex>
-               <Flex
-                  wrap={'wrap'}
-                  css={{
-                     'gap': '$8',
-                     'py': '$7',
-                     '@sm': {
-                        py: '$4',
-                     },
-                  }}
-               >
-                  <Flex
-                     css={{
-                        color: '$accents7',
-                        alignItems: 'center',
-                     }}
-                  >
-                     <CheckIcon /> No credit card required.
-                  </Flex>
-                  <Flex
-                     css={{
-                        color: '$accents7',
-                        alignItems: 'center',
-                     }}
-                  >
-                     <CheckIcon /> 14-day free trial.
-                  </Flex>
-                  <Flex
-                     css={{
-                        color: '$accents7',
-                        alignItems: 'center',
-                     }}
-                  >
-                     <CheckIcon /> Cancel anytime.
-                  </Flex>
-               </Flex>
+          <br></br>
             </Box>
             <Box
                css={{
@@ -130,7 +100,9 @@ export const Hero = () => {
                   },
                }}
             >
-               <img src="mock.png" />
+               <Image src="/landing.svg" alt=''
+                  width={500}
+               height={400}/>
             </Box>
          </Flex>
          <Divider

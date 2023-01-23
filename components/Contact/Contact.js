@@ -1,14 +1,11 @@
 import { useState, useEffect, useRef } from "react";
-import Filter from "bad-words";
 import { MENULINKS } from "../../constants";
 import toast, { Toaster } from "react-hot-toast";
 import Fade from "react-reveal/Fade";
 import mail from "./mailer";
 import gsap from "gsap";
-import styles from "./Contact.module.scss";
+import styles from "./contact.module.scss";
 
-const filter = new Filter();
-filter.removeWords("hell", "god", "shit");
 
 const empty = () =>
   toast.error("Please fill the required fields", {
@@ -54,9 +51,8 @@ const Contact = () => {
       if (
         value.trim() !== prevVal[id] &&
         value.trim().length > prevVal[id].trim().length
-      ) {
-        return { ...prevVal, [id]: filter.clean(value.trim()) };
-      } else {
+      ) 
+        {
         return { ...prevVal, [id]: value };
       }
     });

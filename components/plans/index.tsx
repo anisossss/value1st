@@ -16,7 +16,7 @@ export const Plans = () => {
          >
             <Flex direction={'column'} align={'center'}>
                <Text span css={{color: '$blue600'}}>
-                  Awesome Feature
+                  
                </Text>
                <Text h2>Flexible Plans</Text>
             </Flex>

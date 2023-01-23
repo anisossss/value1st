@@ -18,7 +18,7 @@ export const ModalLogin = () => {
    };
    return (
       <div>
-         <Navbar.Link onClick={handler}>Login</Navbar.Link>
+         <Navbar.Link  className='btn' onClick={handler}>Book a demo</Navbar.Link>
          <Modal
             closeButton
             blur
@@ -27,11 +27,14 @@ export const ModalLogin = () => {
             onClose={closeHandler}
          >
             <Modal.Header>
-               <Text id="modal-title" size={18}>
-                  Welcome to
-                  <Text b size={18}>
-                     NextUI
-                  </Text>
+               <Text id="modal-title" size={20}
+                 css={{
+                    fontWeight:"bold"   ,  
+                    textGradient: "45deg, #FF5F1F -20%, #FF872A 50%",
+                  }}
+               >
+                  Book a Demo
+                  
                </Text>
             </Modal.Header>
             <Modal.Body>
@@ -39,33 +42,27 @@ export const ModalLogin = () => {
                   clearable
                   bordered
                   fullWidth
-                  color="primary"
                   size="lg"
                   placeholder="Email"
-                  //   contentLeft={<Mail fill="currentColor" />}
                />
                <Input
                   clearable
                   bordered
                   fullWidth
-                  color="primary"
                   size="lg"
-                  placeholder="Password"
-                  //   contentLeft={<Password fill="currentColor" />}
+                  placeholder="Subject"
                />
-               <Row justify="space-between">
-                  <Checkbox>
-                     <Text size={14}>Remember me</Text>
-                  </Checkbox>
-                  <Text size={14}>Forgot password?</Text>
-               </Row>
+              
             </Modal.Body>
             <Modal.Footer>
-               <Button auto flat color="error" onClick={closeHandler}>
-                  Close
-               </Button>
-               <Button auto onClick={closeHandler}>
-                  Sign in
+            
+               <Button
+                     css={{
+                     margin: "auto",
+                        marginBottom:20
+                  }}
+                  className='btn' onClick={closeHandler}>
+                  Send
                </Button>
             </Modal.Footer>
          </Modal>

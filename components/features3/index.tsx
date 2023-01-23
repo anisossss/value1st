@@ -22,9 +22,9 @@ export const Features3 = () => {
                }}
             >
                <Text span css={{color: '$blue600'}}>
-                  Awesome Feature
+                  
                </Text>
-               <Text h3>Your title here</Text>
+               <Text h3>VALUE1ST</Text>
                <Text
                   span
                   css={{
@@ -52,7 +52,7 @@ export const Features3 = () => {
                      <Flex css={{gap: '0.5rem'}}>
                         <BoxIcon />
                         <Flex direction={'column'}>
-                           <Text h5>Your Title</Text>
+                           <Text h5>VALUE1ST</Text>
                            <Text span>
                               Lorem ipsum dolor sit amet, consectetur adipiscing
                               elit. Sed condimentum, nisl ut aliquam lacinia,
@@ -67,7 +67,7 @@ export const Features3 = () => {
                      <Flex css={{gap: '0.5rem'}}>
                         <BoxIcon />
                         <Flex direction={'column'}>
-                           <Text h5>Your Title</Text>
+                           <Text h5>VALUE1ST</Text>
                            <Text span>
                               Lorem ipsum dolor sit amet, consectetur adipiscing
                               elit. Sed condimentum, nisl ut aliquam lacinia,
@@ -92,7 +92,7 @@ export const Features3 = () => {
                      <Flex css={{gap: '0.5rem'}}>
                         <BoxIcon />
                         <Flex direction={'column'}>
-                           <Text h5>Your Title</Text>
+                           <Text h5>VALUE1ST</Text>
                            <Text span>
                               Lorem ipsum dolor sit amet, consectetur adipiscing
                               elit. Sed condimentum, nisl ut aliquam lacinia,
@@ -107,7 +107,7 @@ export const Features3 = () => {
                      <Flex css={{gap: '0.5rem'}}>
                         <BoxIcon />
                         <Flex direction={'column'}>
-                           <Text h5>Your Title</Text>
+                           <Text h5>VALUE1ST</Text>
                            <Text span>
                               Lorem ipsum dolor sit amet, consectetur adipiscing
                               elit. Sed condimentum, nisl ut aliquam lacinia,

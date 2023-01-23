@@ -1,239 +1,107 @@
-import {Divider, Text} from '@nextui-org/react';
+import {Divider, Text, Grid} from '@nextui-org/react';
 import React from 'react';
-import {AcmeLogo} from '../navbar/logo';
+import { Image } from '@nextui-org/react';
 import {Box} from '../styles/box';
 import {Flex} from '../styles/flex';
-
+import Link from 'next/link';
 export const Footer = () => {
    return (
-      <Flex
-         css={{
-            py: '$20',
-            px: '$6',
-         }}
-      >
-         <Box as={'footer'} css={{width: '100%'}}>
-            <Flex
-               justify={'center'}
-               wrap={'wrap'}
-               align={'center'}
-               css={{
-                  'gap': '$10',
-                  '&  ul': {
-                     margin: 0,
-                  },
-                  '@sm': {},
-               }}
-            >
-               <Flex
-                  css={{gap: '$5', w: '250px'}}
-                  direction={'column'}
-                  align={'center'}
-               >
-                  <AcmeLogo />
-                  <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           First Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Second Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Third Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Forth Link
-                        </Text>
-                     </Box>
-                  </Box>
-               </Flex>
-               <Flex
-                  css={{gap: '$5', w: '250px'}}
-                  direction={'column'}
-                  align={'center'}
-               >
-                  <Text h5>Resources</Text>
-                  <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           First Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Second Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Third Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Forth Link
-                        </Text>
-                     </Box>
-                  </Box>
-               </Flex>
-               <Flex
-                  css={{gap: '$5', w: '250px'}}
-                  direction={'column'}
-                  align={'center'}
-               >
-                  <Text h5>Contact</Text>
-                  <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           First Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Second Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Third Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Forth Link
-                        </Text>
-                     </Box>
-                  </Box>
-               </Flex>
-               <Flex
-                  css={{gap: '$5', w: '250px'}}
-                  direction={'column'}
-                  align={'center'}
-               >
-                  <Text h5>Legal</Text>
-                  <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           First Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Second Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Third Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Forth Link
-                        </Text>
-                     </Box>
-                  </Box>
-               </Flex>
-               <Flex
-                  css={{gap: '$5', w: '250px'}}
-                  direction={'column'}
-                  align={'center'}
-               >
-                  <Text h5>Press</Text>
-                  <Box as={'ul'} css={{gap: '$5', listStyle: 'none'}}>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           First Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Second Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Third Link
-                        </Text>
-                     </Box>
-                     <Box as={'li'}>
-                        <Text span css={{color: '$accents8'}}>
-                           Forth Link
-                        </Text>
-                     </Box>
-                  </Box>
-               </Flex>
-            </Flex>
-            <Box
-               css={{
-                  'px': '$10',
-                  '@md': {
-                     px: '$56',
-                  },
-               }}
-            >
-               <Divider
-                  css={{
-                     mt: '$14',
-                     display: 'flex',
-                     justifyContent: 'center',
-                  }}
+     <Flex
+       css={{
+ 
+       }}
+     >
+       <Divider css={{ position: "absolute", inset: "0p", left: "0" }} />
+       <Box as={"footer"} css={{ width: "100%" , margin:'auto'}}>
+         <Box
+           css={{
+             px: "$12",
+             "@md": {
+               px: "$20",
+             },
+           }}
+         >
+           <Flex
+             align={"center"}
+             wrap={"wrap"}
+             css={{
+               justifyContent: "center",
+               "@md": {
+                 justifyContent: "space-around",
+               },
+             }}
+           >
+             <Flex
+             
+               wrap={"wrap"}
+             >
+               <Image
+                 width={170}
+                 height={100}
+                 src="/logo.svg"
+                 alt="logo"
+                 objectFit="contain"
                />
-               <Flex
-                  //   justify={'between'}
-                  align={'center'}
-                  wrap={'wrap'}
-                  css={{
-                     'pt': '$8',
-                     'gap': '$10',
-                     'justifyContent': 'center',
-                     '@md': {
-                        justifyContent: 'space-between',
-                     },
-                  }}
-               >
-                  <Flex
-                     css={{
-                        gap: '$10',
-                     }}
-                     wrap={'wrap'}
-                  >
-                     <AcmeLogo />
-                     <AcmeLogo />
-                     <AcmeLogo />
-                     <AcmeLogo />
-                  </Flex>
-                  <Flex
-                     css={{
-                        gap: '$6',
-                     }}
-                  >
-                     <Text span css={{color: '$accents8'}}>
-                        Terms of Service
-                     </Text>
-                     <Text span css={{color: '$accents8'}}>
-                        Privacy Policy
-                     </Text>
-                  </Flex>
-                  <Flex
-                     css={{
-                        gap: '$6',
-                     }}
-                  >
-                     <Text span css={{color: '$accents8'}}>
-                        © Copyright 2021 Acme Inc.
-                     </Text>
-                  </Flex>
+             </Flex>
+             <Flex
+               css={{
+                 gap: "$10",
+               }}
+             >
+               <Link href="/terms-of-service">
+                 <Text span css={{ color: "$accents8", cursor: "pointer" }}>
+                   Terms of Service
+                 </Text>
+               </Link>
+               <Link href="/privacy-policy">
+                 <Text span css={{ color: "$accents8", cursor: "pointer" }}>
+                   Privacy Policy
+                 </Text>
+               </Link>
+             </Flex>
+             <Flex css={{ textAlign: "center" }}>
+               <Text span>© Copyright 2023 VALUE1ST Inc.</Text>
+             </Flex>
+           </Flex>
+           <Grid.Container
+             alignItems="center"
+             justify="center"
+             css={{
+               width: "50%",
+               margin:'auto',
+               "@sm": {
+                 width: "100%",
+               },
+               "&  span": {
+                 whiteSpace: "pre",
+               },
+             }}
+           >
+             <Grid sm={3} justify="center">
+               <Flex align={"center"} justify={"center"}>
+                 <Image
+                   width={100}
+                   height={100}
+                   src="/visa.svg"
+                   alt="payment methods"
+                   objectFit="contain"
+                 />
                </Flex>
-            </Box>
+             </Grid>
+             <Grid sm={3} justify="center">
+               <Flex align={"center"} justify={"center"}>
+                 <Image
+                   width={100}
+                   height={100}
+                   src="/mastercard.svg"
+                   alt="payment methods"
+                   objectFit="contain"
+                 />
+               </Flex>
+             </Grid>
+           </Grid.Container>
          </Box>
-      </Flex>
+       </Box>
+     </Flex>
    );
 };
