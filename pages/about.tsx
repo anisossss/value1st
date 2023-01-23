@@ -3,7 +3,7 @@ import React from 'react';
 import { Button} from "@nextui-org/react";
 import { Image } from "@nextui-org/react";
 import { Flex } from "@/components/styles/flex";
-import { Meta } from "@/components/seo";
+import { Meta } from "../components/seo";
 
 const About = () => {
    return (

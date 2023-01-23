@@ -19,6 +19,6 @@
             "@/components/*": ["components/*"]
         },
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/services.tsx", "components/navbar/navbar.tsx", "components/seo/Meta.js", "components/toolModal"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/services.tsx", "components/navbar/navbar.tsx", "components/seo/index.js", "components/toolModal"],
   "exclude": ["node_modules"]
 }
