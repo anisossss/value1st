@@ -16,7 +16,7 @@ body {
  .btn {
   cursor: pointer;
   text-align: center;
-  padding: 0.5em;
+  padding: 0.8em;
   text-decoration: none;
   border-radius: 15px;
   transition: all 0.2s;
@@ -27,3 +27,8 @@ body {
           animation: anime 16s linear infinite;
 }
 
+@media screen and (max-width:320px ){
+   .btn{
+      display: none;
+   }
+}
