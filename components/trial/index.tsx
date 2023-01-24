@@ -1,9 +1,25 @@
 import { Button, Divider, Text, Input } from "@nextui-org/react";
-import React from "react";
+import React, { useState }  from "react";
 import { Flex } from "../styles/flex";
 import { Checkbox } from "@nextui-org/react";
+import axios from "axios";
 
 export const Trial = () => {
+ const [email, setEmail] = useState<string>("");
+
+ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+   e.preventDefault();
+   try {
+     const response = await axios.post(
+       "https://value1st-backend.vercel.app/subscribe",
+       { email }
+     );
+     console.log(response);
+   } catch (error) {
+     console.error(error);
+   }
+ };
+
   return (
     <>
       <Flex
@@ -59,12 +75,25 @@ export const Trial = () => {
           }}
           wrap={"wrap"}
         >
-          <Input placeholder="Enter your email address" size="lg" />
-
+          <Input
+            placeholder="Enter your email address"
+            size="lg"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <form onSubmit={handleSubmit}>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <button type="submit">Subscribe</button>
+          </form>
           <Button className="btn">Try it out</Button>
         </Flex>
       </Flex>
-
     </>
   );
 };
