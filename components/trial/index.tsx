@@ -76,24 +76,23 @@ export const Trial = () => {
           wrap={"wrap"}
         >
           <form onSubmit={handleSubmit}>
-            <Input
+            {/* <Input
               placeholder="Enter your email address"
               size="lg"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-            />
-            {/* <input
+            /> */}
+            <input
               type="email"
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <button type="submit">Subscribe</button> */}
+            <button type="submit" className="btn">
+              Subscribe
+            </button>
           </form>
-          <Button className="btn" type="submit">
-            Try it out
-          </Button>
         </Flex>
       </Flex>
     </>
