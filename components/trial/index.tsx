@@ -11,7 +11,7 @@ export const Trial = () => {
    e.preventDefault();
    try {
      const response = await axios.post(
-       "https://value1st-backend.vercel.app/subscribe",
+       "https://https://value1st-backend.vercel.app/subscribe",
        { email }
      );
      console.log(response);
@@ -75,23 +75,25 @@ export const Trial = () => {
           }}
           wrap={"wrap"}
         >
-          <Input
-            placeholder="Enter your email address"
-            size="lg"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
           <form onSubmit={handleSubmit}>
-            <input
+            <Input
+              placeholder="Enter your email address"
+              size="lg"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            {/* <input
               type="email"
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <button type="submit">Subscribe</button>
+            <button type="submit">Subscribe</button> */}
           </form>
-          <Button className="btn">Try it out</Button>
+          <Button className="btn" type="submit">
+            Try it out
+          </Button>
         </Flex>
       </Flex>
     </>

@@ -4,6 +4,8 @@ import {BoxIcon} from '../icons/BoxIcon';
 import {Box} from '../styles/box';
 import {Flex} from '../styles/flex';
 import { Image } from "@nextui-org/react";
+const Fade = require("react-reveal/Fade");
+const Bounce = require("react-reveal/Bounce");
 
 export const Features1 = () => {
    return (
@@ -27,99 +29,105 @@ export const Features1 = () => {
          }}
        >
          <Flex direction="column">
-           <Text span css={{ color: "$blue600" }}></Text>
-           <Text h3>VALUE1ST</Text>
-           <Text
-             span
-             css={{
-               maxWidth: "400px",
-               color: "$accents8",
-             }}
-           >
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-             condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl, nec
-             tincidunt nisl lorem eu nunc. Sed euismod, nisl ut aliquam lacinia,
-           </Text>
+           <Fade top>
+             <Text span css={{ color: "$blue600" }}></Text>
+             <Text h3>VALUE1ST</Text>
+             <Text
+               span
+               css={{
+                 maxWidth: "400px",
+                 color: "$accents8",
+               }}
+             >
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+               condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl, nec
+               tincidunt nisl lorem eu nunc. Sed euismod, nisl ut aliquam
+               lacinia,
+             </Text>
+             <Flex
+               css={{
+                 py: "$10",
+                 gap: "$5",
+               }}
+             >
+               <BoxIcon />
+               <Flex direction={"column"}>
+                 <Text h4 weight={"medium"}>
+                   VALUE1ST
+                 </Text>
+                 <Text
+                   span
+                   css={{
+                     maxWidth: "400px",
+                     color: "$accents8",
+                   }}
+                 >
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                   condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl,
+                 </Text>
+               </Flex>
+             </Flex>
+             <Flex
+               css={{
+                 py: "$10",
+                 gap: "$5",
+               }}
+             >
+               <BoxIcon />
+               <Flex direction={"column"}>
+                 <Text h4 weight={"medium"}>
+                   VALUE1ST
+                 </Text>
+                 <Text
+                   span
+                   css={{
+                     maxWidth: "400px",
+                     color: "$accents8",
+                   }}
+                 >
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                   condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl,
+                 </Text>
+               </Flex>
+             </Flex>
 
-           <Flex
-             css={{
-               py: "$10",
-               gap: "$5",
-             }}
-           >
-             <BoxIcon />
-             <Flex direction={"column"}>
-               <Text h4 weight={"medium"}>
-                 VALUE1ST
-               </Text>
-               <Text
-                 span
-                 css={{
-                   maxWidth: "400px",
-                   color: "$accents8",
-                 }}
-               >
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                 condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl,
-               </Text>
+             <Flex
+               css={{
+                 py: "$10",
+                 gap: "$5",
+               }}
+             >
+               <BoxIcon />
+               <Flex direction={"column"}>
+                 <Text h4 weight={"medium"}>
+                   VALUE1ST
+                 </Text>
+                 <Text
+                   span
+                   css={{
+                     maxWidth: "400px",
+                     color: "$accents8",
+                   }}
+                 >
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                   condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl,
+                 </Text>
+               </Flex>
              </Flex>
-           </Flex>
-           <Flex
-             css={{
-               py: "$10",
-               gap: "$5",
-             }}
-           >
-             <BoxIcon />
-             <Flex direction={"column"}>
-               <Text h4 weight={"medium"}>
-                 VALUE1ST
-               </Text>
-               <Text
-                 span
-                 css={{
-                   maxWidth: "400px",
-                   color: "$accents8",
-                 }}
-               >
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                 condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl,
-               </Text>
-             </Flex>
-           </Flex>
-           <Flex
-             css={{
-               py: "$10",
-               gap: "$5",
-             }}
-           >
-             <BoxIcon />
-             <Flex direction={"column"}>
-               <Text h4 weight={"medium"}>
-                 VALUE1ST
-               </Text>
-               <Text
-                 span
-                 css={{
-                   maxWidth: "400px",
-                   color: "$accents8",
-                 }}
-               >
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                 condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl,
-               </Text>
-             </Flex>
-           </Flex>
+           </Fade>
          </Flex>
+
          <Flex align={"center"}>
            <Flex align={"center"} justify={"center"}>
-             <Image
-               width={500}
-               height={500}
-               src="/adsleads.svg"
-               alt="Default Image"
-               objectFit="contain"
-             />
+             <Bounce right>
+               <Image
+                 width={500}
+                 height={500}
+                 src="/adsleads.svg"
+                 alt="Default Image"
+                 objectFit="contain"
+               />
+             </Bounce>
            </Flex>{" "}
          </Flex>
        </Flex>

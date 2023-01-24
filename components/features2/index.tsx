@@ -3,6 +3,7 @@ import React from 'react';
 import {BoxIcon} from '../icons/BoxIcon';
 import {Flex} from '../styles/flex';
 import { Image } from "@nextui-org/react";
+const Fade = require("react-reveal/Fade");
 
 export const Features2 = () => {
    return (
@@ -27,19 +28,23 @@ export const Features2 = () => {
          }}
        >
          <Flex direction="column" align={"center"}>
-           <Text span css={{ color: "$blue600" }}></Text>
-           <Text h3>VALUE1ST</Text>
-           <Text
-             span
-             css={{
-               maxWidth: "400px",
-               color: "$accents8",
-             }}
-           >
-             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-             condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl, nec
-             tincidunt nisl lorem eu nunc. Sed euismod, nisl ut aliquam lacinia,
-           </Text>
+           <Fade top>
+             <Text span css={{ color: "$blue600" }}></Text>
+             <Text h3>VALUE1ST</Text>
+             <Text
+               span
+               css={{
+                 maxWidth: "400px",
+                 color: "$accents8",
+               }}
+             >
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+               condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl, nec
+               tincidunt nisl lorem eu nunc. Sed euismod, nisl ut aliquam
+               lacinia,
+             </Text>
+           </Fade>
+                          <Fade top>
 
            <Flex
              justify={"center"}
@@ -54,22 +59,23 @@ export const Features2 = () => {
                  gap: "$5",
                }}
              >
-               <BoxIcon />
-               <Flex direction={"column"}>
-                 <Text h4 weight={"medium"}>
-                   VALUE1ST
-                 </Text>
-                 <Text
-                   span
-                   css={{
-                     maxWidth: "325px",
-                     color: "$accents8",
-                   }}
-                 >
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                   condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl,
-                 </Text>
-               </Flex>
+                 <BoxIcon />
+                 <Flex direction={"column"}>
+                   <Text h4 weight={"medium"}>
+                     VALUE1ST
+                   </Text>
+                   <Text
+                     span
+                     css={{
+                       maxWidth: "325px",
+                       color: "$accents8",
+                     }}
+                   >
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     Sed condimentum, nisl ut aliquam lacinia, nisl nisl aliquet
+                     nisl,
+                   </Text>
+                 </Flex>
              </Flex>
              <Flex
                css={{
@@ -93,18 +99,23 @@ export const Features2 = () => {
                    condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl,
                  </Text>
                </Flex>
+               
              </Flex>
-           </Flex>
+             
+             </Flex>
+             </Fade>
          </Flex>
          <Flex align={"center"}>
            <Flex align={"center"} justify={"center"}>
-             <Image
-               width={500}
-               height={500}
-               src="/stats.png"
-               alt="ads"
-               objectFit="contain"
-             />
+             <Fade top>
+               <Image
+                 width={500}
+                 height={500}
+                 src="/stats.png"
+                 alt="ads"
+                 objectFit="contain"
+               />
+             </Fade>
            </Flex>{" "}
          </Flex>
        </Flex>

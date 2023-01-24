@@ -18,8 +18,7 @@
     "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-intersection-observer": "^9.4.1",
-    "react-reveal": "^1.2.2"
+    "react-intersection-observer": "^9.4.1"
   },
   "devDependencies": {
     "@types/node": "18.7.18",
@@ -27,6 +26,7 @@
     "@types/react-dom": "18.0.6",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.0",
+    "react-reveal": "^1.2.2",
     "typescript": "4.8.3"
   }
 }
