@@ -67,33 +67,27 @@ export const Trial = () => {
             techniques for free.
           </Checkbox>
         </Text>
-
-        <Flex
-          css={{
-            gap: "$8",
-            pt: "$4",
-          }}
-          wrap={"wrap"}
-        >
-          <form onSubmit={handleSubmit}>
-            {/* <Input
+        <form onSubmit={handleSubmit}>
+          <Flex
+            css={{
+              gap: "$8",
+              pt: "$4",
+            }}
+            wrap={"wrap"}
+          >
+            <Input
               placeholder="Enter your email address"
               size="lg"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-            /> */}
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
             />
-            <button type="submit" className="btn">
+
+            <Button type="submit" className="btn">
               Subscribe
-            </button>
-          </form>
-        </Flex>
+            </Button>
+          </Flex>
+        </form>
       </Flex>
     </>
   );

@@ -1,12 +1,29 @@
 import {Button, Divider, Input, Text} from '@nextui-org/react';
-import React from 'react';
+import React, {useState} from 'react';
 import {Box} from '../styles/box';
 import {Flex} from '../styles/flex';
 import Image from 'next/image';
+import axios from "axios";
+
 const Bounce = require("react-reveal/Bounce");
 const Fade = require("react-reveal/Fade");
 
 export const Hero = () => {
+   const [email, setEmail] = useState<string>("");
+
+   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+     e.preventDefault();
+     try {
+       const response = await axios.post(
+         "https://value1st-backend.vercel.app/api/contact",
+         { email }
+       );
+       console.log(response);
+     } catch (error) {
+       console.error(error);
+     }
+  };
+  
    return (
      <>
        <Flex
@@ -50,7 +67,6 @@ export const Hero = () => {
                </Text>
              </Fade>
 
-          
              <Bounce top>
                <Text
                  h1
@@ -63,27 +79,37 @@ export const Hero = () => {
                </Text>
              </Bounce>
            </Box>
-             <Text
-               css={{
-                 color: "$accents8",
-                 maxWidth: "400px",
-               }}
-               size={"$lg"}
-               span
-             >
-               Leave It to Us.
-             </Text>
-           <Flex
+           <Text
              css={{
-               gap: "$8",
-               pt: "$4",
+               color: "$accents8",
+               maxWidth: "400px",
              }}
-             wrap={"wrap"}
+             size={"$lg"}
+             span
            >
-             <Input placeholder="Enter your email address" size="lg" />
+             Leave It to Us.
+           </Text>
+           <form onSubmit={handleSubmit}>
+             <Flex
+               css={{
+                 gap: "$8",
+                 pt: "$4",
+               }}
+               wrap={"wrap"}
+             >
+               <Input
+                 placeholder="Enter your email address"
+                 size="lg"
+                 value={email}
+                 onChange={(e) => setEmail(e.target.value)}
+                 required
+               />
 
-             <Button className="btn">Book a demo</Button>
-           </Flex>
+               <Button className="btn" type="submit">
+                 Book a demo
+               </Button>
+             </Flex>
+           </form>
            <br></br>
          </Box>
 
