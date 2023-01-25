@@ -3,6 +3,8 @@ import type {AppProps} from 'next/app';
 import {createTheme, NextUIProvider} from '@nextui-org/react';
 import {ThemeProvider as NextThemesProvider} from 'next-themes';
 import { Layout } from '@/components/navbar/layout';
+import { SSRProvider } from "@react-aria/ssr"; 
+
 const lightTheme = createTheme({
    type: 'light',
    theme: {
@@ -27,11 +29,14 @@ function MyApp({Component, pageProps}: AppProps) {
          dark: darkTheme.className,
        }}
      >
+             <SSRProvider>
+
        <Layout>
          <NextUIProvider>
            <Component {...pageProps} />
          </NextUIProvider>
-       </Layout>
+         </Layout>
+         </SSRProvider>
      </NextThemesProvider>
    );
 }

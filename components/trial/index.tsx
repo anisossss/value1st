@@ -1,13 +1,18 @@
-import { Button, Divider, Text, Input } from "@nextui-org/react";
-import React, { useState }  from "react";
+import { Button, Grid, Text, Input } from "@nextui-org/react";
+import React, { useState, useEffect }  from "react";
 import { Flex } from "../styles/flex";
 import { Checkbox } from "@nextui-org/react";
 import axios from "axios";
 
 export const Trial = () => {
+  const [flashMessage, setFlashMessage] = useState("");
+  const [showMessage, setShowMessage] = useState(false);
+
  const [email, setEmail] = useState<string>("");
 
  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    setFlashMessage("A confirmation email has been sent to you !");
+    setShowMessage(true);
    e.preventDefault();
    try {
      const response = await axios.post(
@@ -19,7 +24,13 @@ export const Trial = () => {
      console.error(error);
    }
  };
-
+  useEffect(() => {
+    if (showMessage) {
+      setTimeout(() => {
+        setShowMessage(false);
+      }, 8000); // 5 second delay
+    }
+  }, [showMessage]);
   return (
     <>
       <Flex
@@ -88,6 +99,17 @@ export const Trial = () => {
             </Button>
           </Flex>
         </form>
+        {showMessage ? (
+          <Grid
+            css={{
+              fontWeight: "bold",
+              textGradient: "45deg, #23ff1f -20%, #1fff53 50%",
+              padding: "1em",
+            }}
+          >
+            {flashMessage}
+          </Grid>
+        ) : null}
       </Flex>
     </>
   );

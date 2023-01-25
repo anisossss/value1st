@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Modal,
   Input,
@@ -7,14 +7,20 @@ import {
   Button,
   Text,
   Navbar,
+  Grid,
 } from "@nextui-org/react";
 import axios from "axios";
 
 export const ModalLogin = () => {
+const [flashMessage, setFlashMessage] = useState("");
+const [showMessage, setShowMessage] = useState(false);
+
   const [email, setEmail] = useState<string>("");
   const [project, setProject] = useState<string>("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+      setFlashMessage("Demo Request Sent Successfully !");
+      setShowMessage(true);
     e.preventDefault();
     try {
       const response = await axios.post(
@@ -32,6 +38,13 @@ export const ModalLogin = () => {
     setVisible(false);
     console.log("closed");
   };
+  useEffect(() => {
+    if (showMessage) {
+      setTimeout(() => {
+        setShowMessage(false);
+      }, 8000); // 5 second delay
+    }
+  }, [showMessage]);
   return (
     <div>
       <Navbar.Link className="btn" onClick={handler}>
@@ -43,11 +56,12 @@ export const ModalLogin = () => {
         aria-labelledby="modal-title"
         open={visible}
         onClose={closeHandler}
+        aria-label="Close"
       >
         <Modal.Header>
           <Text
             id="modal-title"
-            size={20}
+            size={22}
             css={{
               fontWeight: "bold",
               textGradient: "45deg, #FF5F1F -20%, #FF872A 50%",
@@ -92,6 +106,17 @@ export const ModalLogin = () => {
             </Button>
           </Modal.Footer>
         </form>
+        {showMessage ? (
+          <Grid
+            css={{
+              fontWeight:'bold',
+              textGradient: "45deg, #23ff1f -20%, #1fff53 50%",
+              padding: "1em",
+            }}
+          >
+            {flashMessage}
+          </Grid>
+        ) : null}
       </Modal>
     </div>
   );
