@@ -12,14 +12,14 @@ import axios from "axios";
 
 export const ModalLogin = () => {
   const [email, setEmail] = useState<string>("");
-  const [subject, setSubject] = useState<string>("");
+  const [project, setProject] = useState<string>("");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://value1st-backend.vercel.app/api/contact",
-        { email, subject }
+        "http://localhost:8080/api/contact",
+        { email, project }
       );
       console.log(response);
     } catch (error) {
@@ -56,9 +56,8 @@ export const ModalLogin = () => {
             Book a Demo
           </Text>
         </Modal.Header>
-          <form onSubmit={handleSubmit}>
-
-        <Modal.Body>
+        <form onSubmit={handleSubmit}>
+          <Modal.Body>
             <Input
               clearable
               bordered
@@ -70,29 +69,29 @@ export const ModalLogin = () => {
               required
             />
             <Input
-              value={subject}
+              value={project}
               clearable
               bordered
               fullWidth
               size="lg"
               placeholder="Subject"
-              onChange={(e) => setSubject(e.target.value)}
+              required
+              onChange={(e) => setProject(e.target.value)}
             />
-      
-        </Modal.Body>
-        <Modal.Footer>
-          <Button
-            css={{
-              margin: "auto",
-              marginBottom: 20,
-            }}
-            className="btn"
-            type="submit"
-          >
-            Send
-          </Button>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button
+              css={{
+                margin: "auto",
+                marginBottom: 20,
+              }}
+              className="btn"
+              type="submit"
+            >
+              Send
+            </Button>
           </Modal.Footer>
-          </form>
+        </form>
       </Modal>
     </div>
   );

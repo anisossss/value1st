@@ -9,20 +9,7 @@ const Bounce = require("react-reveal/Bounce");
 const Fade = require("react-reveal/Fade");
 
 export const Hero = () => {
-   const [email, setEmail] = useState<string>("");
-
-   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-     e.preventDefault();
-     try {
-       const response = await axios.post(
-         "https://value1st-backend.vercel.app/api/contact",
-         { email }
-       );
-       console.log(response);
-     } catch (error) {
-       console.error(error);
-     }
-  };
+ 
   
    return (
      <>
@@ -89,7 +76,6 @@ export const Hero = () => {
            >
              Leave It to Us.
            </Text>
-           <form onSubmit={handleSubmit}>
              <Flex
                css={{
                  gap: "$8",
@@ -97,19 +83,11 @@ export const Hero = () => {
                }}
                wrap={"wrap"}
              >
-               <Input
-                 placeholder="Enter your email address"
-                 size="lg"
-                 value={email}
-                 onChange={(e) => setEmail(e.target.value)}
-                 required
-               />
-
+             
                <Button className="btn" type="submit">
-                 Book a demo
+                 Explore our services
                </Button>
              </Flex>
-           </form>
            <br></br>
          </Box>
 
