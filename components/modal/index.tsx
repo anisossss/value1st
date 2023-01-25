@@ -18,7 +18,7 @@ export const ModalLogin = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/contact",
+        "https://value1st-backend.vercel.app/api/contact",
         { email, project }
       );
       console.log(response);
