@@ -11,7 +11,7 @@ export const Trial = () => {
    e.preventDefault();
    try {
      const response = await axios.post(
-       "https://value1st-backend.vercel.app/subscribe",
+       "https://value1st-backend.vercel.app/api/subscribe",
        { email }
      );
      console.log(response);
