@@ -47,7 +47,7 @@ const [showMessage, setShowMessage] = useState(false);
   }, [showMessage]);
   return (
     <div>
-      <Navbar.Link className="btn" onClick={handler}>
+      <Navbar.Link className="btnn" onClick={handler}>
         Book a demo
       </Navbar.Link>
       <Modal
@@ -99,7 +99,7 @@ const [showMessage, setShowMessage] = useState(false);
                 margin: "auto",
                 marginBottom: 20,
               }}
-              className="btn"
+              className="btnn"
               type="submit"
             >
               Send

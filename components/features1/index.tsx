@@ -1,11 +1,11 @@
 import {Divider, Grid, Text} from '@nextui-org/react';
 import React from 'react';
-import {BoxIcon} from '../icons/BoxIcon';
 import {Box} from '../styles/box';
 import {Flex} from '../styles/flex';
 import { Image } from "@nextui-org/react";
 const Fade = require("react-reveal/Fade");
 const Bounce = require("react-reveal/Bounce");
+const Pulse = require("react-reveal/Pulse");
 
 export const Features1 = () => {
    return (
@@ -30,31 +30,32 @@ export const Features1 = () => {
        >
          <Flex direction="column">
            <Fade top>
-             <Text span css={{ color: "$blue600" }}></Text>
-             <Text h3>VALUE1ST</Text>
              <Text
-               span
+               h2
                css={{
-                 maxWidth: "400px",
-                 color: "$accents8",
+                 letterSpacing: "0.1em",
+                 textGradient: "45deg, #FF5F1F -20%, #FF872A 50%",
                }}
              >
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-               condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl, nec
-               tincidunt nisl lorem eu nunc. Sed euismod, nisl ut aliquam
-               lacinia,
+               VALUE1ST Features
              </Text>
+
              <Flex
                css={{
                  py: "$10",
                  gap: "$5",
+                 alignItems: "center",
                }}
              >
-               <BoxIcon />
+               <Box
+                 css={{
+                   width: "2em",
+                 }}
+               >
+                 {" "}
+                 <Image src="/check.png" alt="" />
+               </Box>
                <Flex direction={"column"}>
-                 <Text h4 weight={"medium"}>
-                   VALUE1ST
-                 </Text>
                  <Text
                    span
                    css={{
@@ -62,8 +63,7 @@ export const Features1 = () => {
                      color: "$accents8",
                    }}
                  >
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                   condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl,
+                   An analysis of the history of your business.
                  </Text>
                </Flex>
              </Flex>
@@ -71,13 +71,18 @@ export const Features1 = () => {
                css={{
                  py: "$10",
                  gap: "$5",
+                 alignItems: "center",
                }}
              >
-               <BoxIcon />
+               <Box
+                 css={{
+                   width: "2em",
+                 }}
+               >
+                 {" "}
+                 <Image src="/check.png" alt="" />
+               </Box>
                <Flex direction={"column"}>
-                 <Text h4 weight={"medium"}>
-                   VALUE1ST
-                 </Text>
                  <Text
                    span
                    css={{
@@ -85,8 +90,7 @@ export const Features1 = () => {
                      color: "$accents8",
                    }}
                  >
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                   condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl,
+                   The perfect plan that will meet your goals.
                  </Text>
                </Flex>
              </Flex>
@@ -95,13 +99,18 @@ export const Features1 = () => {
                css={{
                  py: "$10",
                  gap: "$5",
+                 alignItems: "center",
                }}
              >
-               <BoxIcon />
+               <Box
+                 css={{
+                   width: "2em",
+                 }}
+               >
+                 {" "}
+                 <Image src="/check.png" alt="" />
+               </Box>
                <Flex direction={"column"}>
-                 <Text h4 weight={"medium"}>
-                   VALUE1ST
-                 </Text>
                  <Text
                    span
                    css={{
@@ -109,17 +118,42 @@ export const Features1 = () => {
                      color: "$accents8",
                    }}
                  >
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                   condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl,
+                   Operative campaigns that deliver consistent results.
+                 </Text>
+               </Flex>
+             </Flex>
+             <Flex
+               css={{
+                 py: "$10",
+                 gap: "$5",
+                 alignItems: "center",
+               }}
+             >
+               <Box
+                 css={{
+                   width: "2em",
+                 }}
+               >
+                 {" "}
+                 <Image src="/check.png" alt="" />
+               </Box>
+               <Flex direction={"column"}>
+                 <Text
+                   span
+                   css={{
+                     maxWidth: "400px",
+                     color: "$accents8",
+                   }}
+                 >
+                   Collect real data to continuously boost your revenue.
                  </Text>
                </Flex>
              </Flex>
            </Fade>
          </Flex>
-
          <Flex align={"center"}>
            <Flex align={"center"} justify={"center"}>
-             <Bounce right>
+             <Pulse>
                <Image
                  width={500}
                  height={500}
@@ -127,7 +161,7 @@ export const Features1 = () => {
                  alt="Default Image"
                  objectFit="contain"
                />
-             </Bounce>
+             </Pulse>
            </Flex>{" "}
          </Flex>
        </Flex>

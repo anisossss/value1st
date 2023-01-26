@@ -1,10 +1,42 @@
-import { Button, Divider, Grid, Text } from "@nextui-org/react";
-import React from "react";
+import { Button, Divider, Grid, Text,  Input } from "@nextui-org/react";
+import React, { useState, useEffect } from "react";
 import { Image } from "@nextui-org/react";
 import { Flex } from "@/components/styles/flex";
-// import { Meta } from "../components/seo/index";
+import { Box } from "@/components/styles/box";
+import Link from "next/link";
+ import { useRouter } from "next/router";
+import axios from "axios";
 
+// import { Meta } from "../components/seo/index";
 const Features = () => {
+  const router = useRouter();
+const [flashMessage, setFlashMessage] = useState("");
+const [showMessage, setShowMessage] = useState(false);
+
+const [email, setEmail] = useState<string>("");
+const [project, setProject] = useState<string>("");
+
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  setFlashMessage("Demo Request Sent Successfully !");
+  setShowMessage(true);
+  e.preventDefault();
+  try {
+    const response = await axios.post(
+      "https://value1st-backend.vercel.app/api/contact",
+      { email, project }
+    );
+    console.log(response);
+  } catch (error) {
+    console.error(error);
+  }
+};
+useEffect(() => {
+  if (showMessage) {
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 8000); // 5 second delay
+  }
+}, [showMessage]);
   return (
     <>
       {/* <Meta
@@ -17,53 +49,118 @@ const Features = () => {
         direction={"column"}
         align={"center"}
         css={{
-          pt: "$20",
+          width: "100%",
+          margin: "auto",
+          pt: "$10",
+          pb: "$60",
           px: "$6",
           "@md": {
             px: "$64",
           },
         }}
       >
-        <Text h2 css={{ textAlign: "center" }}>
-          Trusted by over 10000+ customers
+        <Text h2>Contact Us</Text>
+        <Text>
+          Book your call with the CEO - Mahdi Fani Free, Short, Quick, and
+          Effective Demo Call Who Would Benefit From This Audit Call?
+          <br></br> <br></br>
+          <li>Businesses looking to convert their offline business online.</li>
+          <li>
+            Businesses looking to upgrade their current website to a top-notch
+            funnel format.
+          </li>
+          <li>
+            Businesses looking to boost their revenue through paid advertising
+            on social media.
+          </li>
+          <li>
+            Businesses looking for a trustworthy agency that would prioritize
+            their company.
+          </li>
         </Text>
-        <Text
-          css={{
-            color: "$accents8",
-            maxWidth: "800px",
-            textAlign: "center",
-          }}
-          weight="normal"
-          size={"$lg"}
-        >
-          At VALUE1ST, we collaborate with a very specific type of client.
-        </Text>
-        <Grid.Container
-          gap={6}
-          alignItems="center"
-          justify="center"
-          css={{
-            width: "100%",
-            "@sm": {
-              width: "100%",
-            },
-            "&  span": {
-              whiteSpace: "pre",
-            },
-          }}
-        >
-          <Grid sm={3} justify="center">
-            <Flex align={"center"} justify={"center"}>
-              <Image
-                width={170}
-                height={100}
-                src="/logo.svg"
-                alt="Default Image"
-                objectFit="contain"
-              />
-            </Flex>
+        <form onSubmit={handleSubmit} className="form">
+          <Input
+            clearable
+            bordered
+            fullWidth
+            size="lg"
+            placeholder="Email"
+            required
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+          />
+
+          <Input
+            clearable
+            bordered
+            fullWidth
+            size="lg"
+            placeholder="Subject"
+            required
+            value={project}
+            onChange={(e) => setProject(e.target.value)}
+          />
+          <Button
+            type="submit"
+            css={{
+              margin: "auto",
+            }}
+            className="box"
+          >
+            Send
+          </Button>
+        </form>
+
+        {showMessage ? (
+          <Grid
+            css={{
+              fontWeight: "bold",
+              textGradient: "45deg, #23ff1f -20%, #1fff53 50%",
+              padding: "1em",
+            }}
+          >
+            {flashMessage}
           </Grid>
-        </Grid.Container>
+        ) : null}
+        <Grid
+          className="social-btns"
+          css={{
+            justifyContent: "center",
+            alignItems: "center",
+            "@xs": {
+              px: "$20",
+              py: "$12",
+            },
+            "@sm": {
+              gap: "5rem",
+              px: "$20",
+            },
+            "@md": {
+              justifyContent: "space-evenly",
+            },
+          }}
+        >
+          <Link href="https://www.instagram.com/value1st.agency/">
+            <a className="btn" target="_blank" rel="noopener noreferrer">
+              <Image src="/insta.png" alt="instagram" className="fa "></Image>
+            </a>
+          </Link>
+
+          <Link href="https://calendly.com/value1st/demo">
+            <a className="btn" target="_blank" rel="noopener noreferrer">
+              <Image src="/calendar.png" alt="calendly" className="fa "></Image>
+            </a>
+          </Link>
+
+          <a
+            className="btn"
+            onClick={() => router.push("mailto:agency@value1st.net")}
+          >
+            <a>
+              <Image src="/email.png" alt="email" className="fa"></Image>
+            </a>
+          </a>
+        </Grid>
       </Flex>
     </>
   );

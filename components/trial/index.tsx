@@ -94,7 +94,7 @@ export const Trial = () => {
               required
             />
 
-            <Button type="submit" className="btn">
+            <Button type="submit" className="btnn">
               Subscribe
             </Button>
           </Flex>

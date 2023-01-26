@@ -54,7 +54,7 @@ export const Statistics = () => {
               textAlign: "center",
             }}
           >
-            Over 8000+ projects completed
+            Over 120 successful campaign
           </Text>
           <Text
             span
@@ -63,7 +63,7 @@ export const Statistics = () => {
               textAlign: "center",
             }}
           >
-          Our statistics on the best quality
+            Our statistics on the best quality
           </Text>
         </Flex>
         <Flex

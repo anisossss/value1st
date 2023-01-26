@@ -3,8 +3,7 @@ import React, {useState} from 'react';
 import {Box} from '../styles/box';
 import {Flex} from '../styles/flex';
 import Image from 'next/image';
-import axios from "axios";
-
+import Link from 'next/link';
 const Bounce = require("react-reveal/Bounce");
 const Fade = require("react-reveal/Fade");
 
@@ -76,18 +75,17 @@ export const Hero = () => {
            >
              Leave It to Us.
            </Text>
-             <Flex
-               css={{
-                 gap: "$8",
-                 pt: "$4",
-               }}
-               wrap={"wrap"}
-             >
-             
-               <Button className="btn" type="submit">
-                 Explore our services
-               </Button>
-             </Flex>
+           <Flex
+             css={{
+               gap: "$8",
+               pt: "$4",
+             }}
+             wrap={"wrap"}
+           >
+             <Link href="/services">
+               <button className="btn2" >Explore our services</button>
+             </Link>
+           </Flex>
            <br></br>
          </Box>
 

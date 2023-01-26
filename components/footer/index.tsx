@@ -6,16 +6,13 @@ import {Flex} from '../styles/flex';
 import Link from 'next/link';
 export const Footer = () => {
    return (
-     <Flex
-       css={{
- 
-       }}
-     >
+     <Flex css={{}}>
        <Divider css={{ position: "absolute", inset: "0p", left: "0" }} />
-       <Box as={"footer"} css={{ width: "100%" , margin:'auto'}}>
+       <Box as={"footer"} css={{ width: "100%", margin: "auto" }}>
          <Box
            css={{
              px: "$12",
+             py:"$10",
              "@md": {
                px: "$20",
              },
@@ -31,10 +28,7 @@ export const Footer = () => {
                },
              }}
            >
-             <Flex
-             
-               wrap={"wrap"}
-             >
+             <Flex wrap={"wrap"}>
                <Image
                  width={170}
                  height={100}
@@ -68,7 +62,7 @@ export const Footer = () => {
              justify="center"
              css={{
                width: "50%",
-               margin:'auto',
+               margin: "auto",
                "@sm": {
                  width: "100%",
                },
@@ -77,25 +71,27 @@ export const Footer = () => {
                },
              }}
            >
-             <Grid sm={3} justify="center">
+             <Grid sm={2} justify="center">
                <Flex align={"center"} justify={"center"}>
                  <Image
-                   width={100}
-                   height={100}
+                   width={80}
+                   height={50}
                    src="/visa.svg"
                    alt="payment methods"
                    objectFit="contain"
+                   className="pay"
                  />
                </Flex>
              </Grid>
-             <Grid sm={3} justify="center">
+             <Grid sm={2} justify="center">
                <Flex align={"center"} justify={"center"}>
                  <Image
-                   width={100}
+                   width={80}
                    height={100}
                    src="/mastercard.svg"
                    alt="payment methods"
                    objectFit="contain"
+                   className="pay"
                  />
                </Flex>
              </Grid>
