@@ -5,18 +5,10 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Layout } from "@/components/navbar/layout";
 import { SSRProvider } from "@react-aria/ssr";
 
-const lightTheme = createTheme({
-  type: "light",
-  theme: {
-    colors: {},
-  },
-});
 
 const darkTheme = createTheme({
   type: "dark",
-  theme: {
-    colors: {},
-  },
+ 
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -25,7 +17,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       defaultTheme="system"
       attribute="class"
       value={{
-        light: lightTheme.className,
         dark: darkTheme.className,
       }}
     >
