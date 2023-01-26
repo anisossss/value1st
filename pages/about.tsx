@@ -1,9 +1,9 @@
 import {Divider, Text, Grid} from '@nextui-org/react';
-import React, { useState , useRef, useEffect} from 'react';
+import React from 'react';
 import { Button} from "@nextui-org/react";
 import { Image } from "@nextui-org/react";
 import { Flex } from "@/components/styles/flex";
-import { Meta } from "../components/seo/index";
+import { Meta } from "../components/seo";
 const Fade = require("react-reveal/Fade");
 
 const About = () => {

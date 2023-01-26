@@ -2,12 +2,11 @@ import { Button, Divider, Grid, Text,  Input } from "@nextui-org/react";
 import React, { useState, useEffect } from "react";
 import { Image } from "@nextui-org/react";
 import { Flex } from "@/components/styles/flex";
-import { Box } from "@/components/styles/box";
 import Link from "next/link";
  import { useRouter } from "next/router";
 import axios from "axios";
 
-import { Meta } from "../components/seo/index";
+import { Meta } from "../components/seo";
 const Features = () => {
   const router = useRouter();
 const [flashMessage, setFlashMessage] = useState("");
