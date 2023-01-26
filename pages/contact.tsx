@@ -7,7 +7,7 @@ import Link from "next/link";
  import { useRouter } from "next/router";
 import axios from "axios";
 
-// import { Meta } from "../components/seo/index";
+import { Meta } from "../components/seo/index";
 const Features = () => {
   const router = useRouter();
 const [flashMessage, setFlashMessage] = useState("");
@@ -39,12 +39,12 @@ useEffect(() => {
 }, [showMessage]);
   return (
     <>
-      {/* <Meta
+      <Meta
         title="Contact - VALUE1ST"
         description="Contact us or book a free Demo at Value1st"
         ogUrl="https://valu&st.net/contact"
         thumbnail="https://i.postimg.cc"
-      ></Meta> */}
+      ></Meta>
       <Flex
         direction={"column"}
         align={"center"}
