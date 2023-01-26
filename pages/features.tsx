@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Meta } from "@/components/seo";
+import { Meta } from "./seo/index";
  import { Features3 } from "@/components/features3";
  const Features = () => {
   return (
