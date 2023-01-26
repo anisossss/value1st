@@ -14,7 +14,7 @@ const About = () => {
          title="About - VALUE1ST"
          description="About our company Value1st"
          ogUrl="https://valu&st.net/about"
-         thumbnail="https://i.postimg.cc/"
+         thumbnail="https://i.postimg.cc/25GTB9cB/THUMBNAIL.png"
        ></Meta>
        <Flex
          direction={"column"}

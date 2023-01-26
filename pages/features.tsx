@@ -9,9 +9,9 @@ import Meta from "./seo/index";
         title="Features - VALUE1ST"
         description="Features at Value1st"
         ogUrl="https://valu&st.net/features"
-        thumbnail="https://i.postimg.cc/J0pfgZWq/thubmnail-Blog6.png"
+        thumbnail="https://i.postimg.cc/25GTB9cB/THUMBNAIL.png"
       ></Meta>
-     <Features3/>
+      <Features3 />
     </>
   );
 };

@@ -42,7 +42,7 @@ useEffect(() => {
         title="Contact - VALUE1ST"
         description="Contact us or book a free Demo at Value1st"
         ogUrl="https://valu&st.net/contact"
-        thumbnail="https://i.postimg.cc"
+        thumbnail="https://i.postimg.cc/25GTB9cB/THUMBNAIL.png"
       ></Meta>
       <Flex
         direction={"column"}

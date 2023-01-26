@@ -58,6 +58,6 @@ Meta.defaultProps = {
   title: "VALUE1ST",
   keywords: "digital marketing, social media",
   description: "Value First, We boost your business within the new era of digital marketing and social media.",
-  thumbnail: "https://www.google.com"
+  thumbnail: "https://i.postimg.cc/25GTB9cB/THUMBNAIL.png"
 }
 

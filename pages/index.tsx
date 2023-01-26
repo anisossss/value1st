@@ -15,10 +15,10 @@ const Home: NextPage = () => {
   return (
     <>
       <Meta
-        title=  "VALUE1ST"
+        title="VALUE1ST"
         description="Value1st"
         ogUrl="https://valu&st.net"
-        thumbnail="https://i.postimg.cc"
+        thumbnail="https://i.postimg.cc/25GTB9cB/THUMBNAIL.png"
         keywords="marketing"
       ></Meta>
       <Box as="main">
@@ -30,8 +30,6 @@ const Home: NextPage = () => {
         <Statistics />
         <Trial />
       </Box>
-    
-
     </>
   );
 };
