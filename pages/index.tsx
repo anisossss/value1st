@@ -7,7 +7,7 @@ import { Features2 } from "@/components/features2";
 import { Testimonials } from "@/components/tesminonials";
 import { Statistics } from "@/components/statistics";
 import { Trial } from "@/components/trial";
-import { Meta } from "./seo/index";
+import Meta from "./seo/index";
 import React, { useEffect, useRef, useState } from "react";
 
 const Home: NextPage = () => {

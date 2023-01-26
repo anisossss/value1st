@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export const Meta = ({ title, keywords, description, ogUrl, thumbnail }) => {
+ const Meta = ({ title, keywords, description, ogUrl, thumbnail }) => {
 
 
   return (
@@ -52,7 +52,7 @@ export const Meta = ({ title, keywords, description, ogUrl, thumbnail }) => {
 
 };
 
-
+export default Meta;
 
 Meta.defaultProps = {
   title: "VALUE1ST",

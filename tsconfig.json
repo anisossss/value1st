@@ -17,10 +17,9 @@
        "baseUrl": ".",
         "paths": {
             "@/components/*": ["components/*"],
-            "@/components/seo": ["components/seo"],
 
         },
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/services.tsx", "components/navbar/navbar.tsx", "components/seo/index.js", "components/toolModal"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/services.tsx", "components/navbar/navbar.tsx", "pages/seo/index.js", "components/toolModal"],
   "exclude": ["node_modules"]
 }

@@ -3,7 +3,7 @@ import React from 'react';
 import { Button} from "@nextui-org/react";
 import { Image } from "@nextui-org/react";
 import { Flex } from "@/components/styles/flex";
-import { Meta } from "./seo/index";
+import Meta from "./seo/index";
 const Fade = require("react-reveal/Fade");
 
 const About = () => {
