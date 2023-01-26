@@ -141,7 +141,7 @@ body {
    line-height: 4em;
 }
 
-/* .pay{
+.pay{
    border-radius: 2em;
      box-shadow: none;
   transition: box-shadow 0.3s ease-in-out;
@@ -152,7 +152,7 @@ height: auto;
 .pay:hover{
      box-shadow: 0 0 3px 3px rgba(255, 103, 21, 0.925);
 
-} */
+}
 
 .cta{
    color: rgb(247, 251, 251)   ;
