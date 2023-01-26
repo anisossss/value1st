@@ -23,11 +23,12 @@ export const Features3 = () => {
            }}
          >
            <Text
-             h3
+             h2
              css={{
                letterSpacing: "0.1em",
                textGradient: "45deg, #FF5F1F -20%, #FF872A 50%",
                textAlign: "center",
+               fontWeight:'bold'
              }}
            >
              VALUE1ST
@@ -48,11 +49,15 @@ export const Features3 = () => {
            justify={"center"}
            wrap={"wrap"}
            css={{
-             gap: "1rem",
+             gap: "2rem",
              pt: "$14",
            }}
          >
            <Card css={{ h: "180px", w: "500px" }} className="card">
+             <span></span>
+             <span></span>
+             <span></span>
+             <span></span>
              <Card.Body>
                <Flex css={{ gap: "0.5rem" }}>
                  <Flex direction={"column"}>
@@ -67,7 +72,7 @@ export const Features3 = () => {
                </Flex>
              </Card.Body>
            </Card>
-           <Card css={{ h: "180px", w: "500px" }} className="card">
+           <Card className="card">
              <Card.Body>
                <Flex css={{ gap: "0.5rem" }}>
                  <Flex direction={"column"}>
@@ -87,11 +92,11 @@ export const Features3 = () => {
            wrap={"wrap"}
            justify={"center"}
            css={{
-             gap: "1rem",
+             gap: "2rem",
              pt: "$8",
            }}
          >
-           <Card css={{ h: "180px", w: "500px" }} className="card">
+           <Card  className="card">
              <Card.Body>
                <Flex css={{ gap: "0.5rem" }}>
                  <Flex direction={"column"}>
@@ -105,7 +110,7 @@ export const Features3 = () => {
                </Flex>
              </Card.Body>
            </Card>
-           <Card css={{ h: "180px", w: "500px" }} className="card">
+           <Card  className="card">
              <Card.Body>
                <Flex css={{ gap: "0.5rem" }}>
                  <Flex direction={"column"}>
@@ -121,8 +126,6 @@ export const Features3 = () => {
            </Card>
          </Flex>
        </Box>
-
-     
      </>
    );
 };

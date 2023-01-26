@@ -158,17 +158,30 @@ height: auto;
    color: rgb(247, 251, 251)   ;
 }
 
-.card {
-    backdrop-filter: blur(15px) saturate(134%);
-    -webkit-backdrop-filter: blur(15px) saturate(134%);
-      background-color: #3d2b173e;
-    background-image: 
-        radial-gradient(at 47% 33%, rgb(100, 77, 65) 0, transparent 59%);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    transition: all 0.5s ;
+
+
+.card  {
+    position: relative;
+    padding: 1em;
+   width: 550px;
+   height: 250px;
+align-items:center ;
+justify-content: center;
+    transition: 0.5s;
+    overflow: hidden;
+   text-align: center;
+   cursor: pointer;
+   line-height: 2em;
 
 }
 .card:hover{
-        box-shadow: 0 0 5px 5px rgba(224, 209, 200, 0.925);
+    background: #ff975f08;
+    color: #ff8635;
+    box-shadow: 0 0 5px #ff9100,
+                0 0 10px #ff952b,
+                0 0 10px #ff380b,
+                0 0 10px #ff7337;
+  transform: scale(1.01);
+
 }
+

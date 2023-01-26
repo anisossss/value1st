@@ -61,7 +61,8 @@ useEffect(() => {
         <Text h2>Contact Us</Text>
         <Text>
           Book your call with the CEO - Mahdi Fani Free, Short, Quick, and
-          Effective Demo Call Who Would Benefit From This Audit Call?
+          Effective Demo Call
+          <Text>Who Would Benefit From This Audit Call?</Text>
           <br></br> <br></br>
           <li>Businesses looking to convert their offline business online.</li>
           <li>
