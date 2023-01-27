@@ -4,13 +4,15 @@ import { createTheme, NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Layout } from "@/components/navbar/layout";
 import { SSRProvider } from "@react-aria/ssr";
+  
 
 
 const darkTheme = createTheme({
   type: "dark",
- 
+  theme: {
+    colors: {},
+  },
 });
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <NextThemesProvider
@@ -20,13 +22,14 @@ function MyApp({ Component, pageProps }: AppProps) {
         dark: darkTheme.className,
       }}
     >
-      <SSRProvider>
-        <Layout>
-          <NextUIProvider>
+      {" "}
+      <NextUIProvider theme={darkTheme}>
+        <SSRProvider>
+          <Layout>
             <Component {...pageProps} />
-          </NextUIProvider>
-        </Layout>
-      </SSRProvider>
+          </Layout>
+        </SSRProvider>
+      </NextUIProvider>
     </NextThemesProvider>
   );
 }

@@ -13,6 +13,7 @@ body {
 
 
 
+
  .btnn {
    margin:auto;
   cursor: pointer;
@@ -157,7 +158,6 @@ height: auto;
 .cta{
    color: rgb(247, 251, 251)   ;
 }
-
 
 
 .card  {
