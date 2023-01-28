@@ -53,12 +53,10 @@ body {
       display: none;
    }
 }
-@media screen and (max-width:1280px ){
 
-}
 
 @media screen and (max-width:500px ){
-  
+
 .card  {
    
    height: auto;
@@ -78,7 +76,8 @@ body {
   transform: scale(0.8);
 }
 .social-btns {
-  height: 90px;
+   width: 20em;
+  height: 150px;
   margin: auto;
   text-align: center;
   top: 0;

@@ -82,5 +82,7 @@ const Fade = require("react-reveal/Fade");
   );
 };
 
-
+export async function getStaticProps() {
+  return { props: {} };
+}
 export default Blog;

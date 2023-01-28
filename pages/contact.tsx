@@ -44,7 +44,7 @@ useEffect(() => {
         ogUrl="https://valu&st.net/contact"
         thumbnail="https://i.postimg.cc/25GTB9cB/THUMBNAIL.png"
       ></Meta>
-      <Grid.Container md={12}>
+      <Grid.Container md={12} xs={12} css={{ p: "$14" }}>
         <Grid md={6} css={{ margin: "auto", mt: "$24", textAlign: "center" }}>
           <Text h2>Contact Us</Text>
 
@@ -81,9 +81,8 @@ useEffect(() => {
                 </a>
               </a>
             </Grid>
-            
             <Text>Who Would Benefit From This Audit Call?</Text>
-            <br></br> 
+            <br></br>
             <Grid css={{ textAlign: "left" }}>
               <li>
                 Businesses looking to convert their offline business online.
@@ -102,7 +101,11 @@ useEffect(() => {
               </li>
             </Grid>
           </Text>
-          <Grid css={{ margin: "auto", pb: "$4", width:'42em' }}>
+          <Grid
+            md={12}
+            xs={12}
+            css={{ margin: "auto", pb: "$4", width: "42em" }}
+          >
             {" "}
             <form onSubmit={handleSubmit} className="form">
               <Input
@@ -153,5 +156,7 @@ useEffect(() => {
     </>
   );
 };
-
+export async function getStaticProps() {
+  return { props: {} };
+}
 export default Features;
