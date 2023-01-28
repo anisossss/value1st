@@ -23,15 +23,13 @@ export const Hero = () => {
            width: "100%",
            "@sm": {
              flexDirection: "row",
-             mt: "$20",
            },
          }}
          justify={"center"}
        >
          <Box
            css={{
-             pt: "$13",
-
+             pt: "10em",
              display: "flex",
              flexDirection: "column",
              gap: "$5",
@@ -102,7 +100,7 @@ export const Hero = () => {
              <Image
                src="/landing.svg"
                alt=""
-               width={500}
+               width={350}
                height={400}
              />
            </Fade>

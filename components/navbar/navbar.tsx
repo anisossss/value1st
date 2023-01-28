@@ -37,7 +37,7 @@ export const Nav = () => {
            background: "tranparent",
            border: "none",
            position: "fixed",
-           top:0
+           top: 0,
          },
        }}
      >
@@ -151,7 +151,7 @@ export const Nav = () => {
          </Navbar.Content>
        </Navbar.Brand>
 
-       <Navbar.Collapse>
+       <Navbar.Collapse css={{ position: "fixed" }}>
          {collapseItems.map(({ title, href }) => (
            <Navbar.CollapseItem key={title}>
              <Link
