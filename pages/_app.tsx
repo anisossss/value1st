@@ -5,6 +5,7 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Layout } from "@/components/navbar/layout";
 import { SSRProvider } from "@react-aria/ssr";
   
+import { Analytics } from "@vercel/analytics/react";
 
 
 const darkTheme = createTheme({
@@ -27,6 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <SSRProvider>
           <Layout>
             <Component {...pageProps} />
+            <Analytics />
           </Layout>
         </SSRProvider>
       </NextUIProvider>

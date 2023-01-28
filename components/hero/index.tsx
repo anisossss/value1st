@@ -83,7 +83,7 @@ export const Hero = () => {
              wrap={"wrap"}
            >
              <Link href="/services">
-               <button className="btn2" >Explore our services</button>
+               <button className="btn2">Explore our services</button>
              </Link>
            </Flex>
            <br></br>
@@ -92,13 +92,19 @@ export const Hero = () => {
          <Box
            css={{
              "& img": {
-               width: "775px",
+               margin:'auto',
+               width: "475px",
                objectFit: "contain",
              },
            }}
          >
            <Fade top>
-             <Image src="/landing.svg" alt="" width={500} height={400} />
+             <Image
+               src="/landing.svg"
+               alt=""
+               width={500}
+               height={400}
+             />
            </Fade>
          </Box>
        </Flex>

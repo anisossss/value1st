@@ -155,8 +155,15 @@ export const Features1 = () => {
            <Flex align={"center"} justify={"center"}>
              <Pulse>
                <Image
+                 css={{
+                 
+                     margin: "auto",
+                     width: "375px",
+                     objectFit: "contain",
+                  
+                 }}
                  width={500}
-                 height={500}
+                 height={400}
                  src="/adsleads.svg"
                  alt="Default Image"
                  objectFit="contain"

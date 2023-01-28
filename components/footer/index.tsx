@@ -12,7 +12,7 @@ export const Footer = () => {
          <Box
            css={{
              px: "$12",
-             py:"$10",
+             py: "$10",
              "@md": {
                px: "$20",
              },
@@ -37,65 +37,57 @@ export const Footer = () => {
                  objectFit="contain"
                />
              </Flex>
-             <Flex
+
+             <Grid.Container
+               alignItems="center"
+               justify="center"
                css={{
-                 gap: "$10",
+                 width: "50%",
+                 margin: "auto",
+                 "@sm": {
+                   width: "100%",
+                 },
+                 "&  span": {
+                   whiteSpace: "pre",
+                 },
                }}
              >
-               <Link href="/terms-of-service">
-                 <Text span css={{ color: "$accents8", cursor: "pointer" }}>
-                   Terms of Service
-                 </Text>
-               </Link>
-               <Link href="/privacy-policy">
-                 <Text span css={{ color: "$accents8", cursor: "pointer" }}>
-                   Privacy Policy
-                 </Text>
-               </Link>
-             </Flex>
+               <Grid sm={2} justify="center">
+                 <Flex align={"center"} justify={"center"}>
+                   <Image
+                     width={80}
+                     height={50}
+                     src="/visa.svg"
+                     alt="payment methods"
+                     objectFit="contain"
+                     className="pay"
+                   />
+                 </Flex>
+               </Grid>
+               <Grid sm={2} justify="center">
+                 <Flex align={"center"} justify={"center"}>
+                   <Image
+                     width={80}
+                     height={100}
+                     src="/mastercard.svg"
+                     alt="payment methods"
+                     objectFit="contain"
+                     className="pay"
+                   />
+                 </Flex>
+               </Grid>
+             </Grid.Container>
+
+             <Link href="/privacy-policy">
+               <Text span css={{ color: "$accents8", cursor: "pointer" }}>
+                 Privacy Policy
+               </Text>
+             </Link>
+
              <Flex css={{ textAlign: "center" }}>
-               <Text span>© Copyright 2023 VALUE1ST Inc.</Text>
+               <Text span>&nbsp;&nbsp;© Copyright 2023 VALUE1ST Inc.</Text>
              </Flex>
            </Flex>
-           <Grid.Container
-             alignItems="center"
-             justify="center"
-             css={{
-               width: "50%",
-               margin: "auto",
-               "@sm": {
-                 width: "100%",
-               },
-               "&  span": {
-                 whiteSpace: "pre",
-               },
-             }}
-           >
-             <Grid sm={2} justify="center">
-               <Flex align={"center"} justify={"center"}>
-                 <Image
-                   width={80}
-                   height={50}
-                   src="/visa.svg"
-                   alt="payment methods"
-                   objectFit="contain"
-                   className="pay"
-                 />
-               </Flex>
-             </Grid>
-             <Grid sm={2} justify="center">
-               <Flex align={"center"} justify={"center"}>
-                 <Image
-                   width={80}
-                   height={100}
-                   src="/mastercard.svg"
-                   alt="payment methods"
-                   objectFit="contain"
-                   className="pay"
-                 />
-               </Flex>
-             </Grid>
-           </Grid.Container>
          </Box>
        </Box>
      </Flex>
