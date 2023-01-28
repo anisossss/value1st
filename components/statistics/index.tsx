@@ -1,9 +1,11 @@
 import {Button, Divider, Text} from '@nextui-org/react';
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {Box} from '../styles/box';
 import {Flex} from '../styles/flex';
-
+  
 export const Statistics = () => {
+  const counterRef = useRef(null);
+
     const [counter1, setCounter1] = useState(0);
     const [counter2, setCounter2] = useState(0);
     const [counter3, setCounter3] = useState(0);
@@ -32,12 +34,22 @@ export const Statistics = () => {
           clearInterval(interval3);
         }
       }, 1);
-      return () => {
-        clearInterval(interval1);
-        clearInterval(interval2);
-        clearInterval(interval3);
-      };
+     
     }, [counter1, counter2, counter3]);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+      setCounter3((counter3) => counter3 + 1);
+      setCounter3((counter3) => counter3 + 1);
+      setCounter3((counter3) => counter3 + 1);
+        }
+      });
+    });
+    observer.observe(counterRef.current);
+    // cleanup function
+    return () => observer.disconnect();
+  }, []);
   return (
     <>
       <Box
@@ -73,12 +85,12 @@ export const Statistics = () => {
           css={{
             gap: "4rem",
             pt: "$16",
-            "@sm": {
+            "@xs": {
               gap: "10rem",
             },
           }}
         >
-          <Flex direction={"column"}>
+          <Flex direction={"column"} ref={counterRef}>
             <Text
               h2
               css={{

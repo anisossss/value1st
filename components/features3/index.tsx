@@ -1,6 +1,5 @@
-import {Card, Divider, Text} from '@nextui-org/react';
+import {Card,  Text} from '@nextui-org/react';
 import React from 'react';
-import {BoxIcon} from '../icons/BoxIcon';
 import {Box} from '../styles/box';
 import {Flex} from '../styles/flex';
 
@@ -53,11 +52,8 @@ export const Features3 = () => {
              pt: "$14",
            }}
          >
-           <Card css={{ h: "180px", w: "500px" }} className="card">
-             <span></span>
-             <span></span>
-             <span></span>
-             <span></span>
+           <Card  className="card">
+            
              <Card.Body>
                <Flex css={{ gap: "0.5rem" }}>
                  <Flex direction={"column"}>

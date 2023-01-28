@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       ></Meta>
       <Box as="main">
         <Hero />
-        <Trusted />
+        {/* <Trusted /> */}
         <Features1 />
         <Features2 />
         <Testimonials />

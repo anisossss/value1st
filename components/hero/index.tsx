@@ -2,7 +2,7 @@ import {Button, Divider, Input, Text} from '@nextui-org/react';
 import React, {useState} from 'react';
 import {Box} from '../styles/box';
 import {Flex} from '../styles/flex';
-import Image from 'next/image';
+import { Image } from "@nextui-org/react";
 import Link from 'next/link';
 const Bounce = require("react-reveal/Bounce");
 const Fade = require("react-reveal/Fade");

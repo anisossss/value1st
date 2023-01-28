@@ -16,8 +16,8 @@ export const Nav = () => {
        title: "Services",
      },
      {
-       href: "/features",
-       title: "Features",
+       href: "/blog",
+       title: "Blog",
      },
      {
        href: "/about",
@@ -34,8 +34,10 @@ export const Nav = () => {
        variant="sticky"
        css={{
          "& .nextui-navbar-container": {
-           background: "transarent",
+           background: "tranparent",
            border: "none",
+           position: "fixed",
+           top:0
          },
        }}
      >
@@ -141,8 +143,8 @@ export const Nav = () => {
                </Dropdown.Item>
              </Dropdown.Menu>
            </Dropdown>
-           <Navbar.Link isActive href="/features">
-             Features
+           <Navbar.Link isActive href="/blog">
+             Blog
            </Navbar.Link>
            <Navbar.Link href="/about">About</Navbar.Link>
            <Navbar.Link href="/contact">Contact</Navbar.Link>
@@ -166,15 +168,6 @@ export const Nav = () => {
        </Navbar.Collapse>
        <Navbar.Content>
          <ModalLogin />
-
-         <Navbar.Item>
-           <Switch
-             css={{
-               display: "none",
-             }}
-             onChange={(e) => setTheme(e.target.checked ? "dark" : "dark")}
-           />
-         </Navbar.Item>
        </Navbar.Content>
      </Navbar>
    );

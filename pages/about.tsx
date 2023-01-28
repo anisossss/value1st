@@ -4,18 +4,19 @@ import { Button} from "@nextui-org/react";
 import { Image } from "@nextui-org/react";
 import { Flex } from "@/components/styles/flex";
 import Meta from "./seo/index";
-const Fade = require("react-reveal/Fade");
-
+import { Features3 } from '@/components/features3';
 const About = () => {
 
    return (
      <>
        <Meta
          title="About - VALUE1ST"
-         description="About our company Value1st"
+         description="About our company - Value1st"
          ogUrl="https://valu&st.net/about"
          thumbnail="https://i.postimg.cc/25GTB9cB/THUMBNAIL.png"
        ></Meta>
+       <Features3 />
+
        <Flex
          direction={"column"}
          css={{
@@ -44,7 +45,6 @@ const About = () => {
              textAlign: "justify",
            }}
          >
-           <Fade top>
              <Text
                h1
                css={{
@@ -54,7 +54,7 @@ const About = () => {
                About Us
              </Text>
              <br></br> <br></br>
-             <Text span>
+             <Text >
                At
                <Text
                  css={{
@@ -63,42 +63,32 @@ const About = () => {
                    textGradient: "45deg, #FF5F1F -20%, #FF872A 50%",
                  }}
                >
-                 &nbsp; VALUE1ST
+                 &nbsp;VALUE1ST
                </Text>
-               , we collaborate with a very specific type of client. We aren’t
-               your average agency next door begging for your money. Our
-               unmatched strategies generate record-breaking amounts of dollars
-               in
-               <Text
-                 css={{
-                   fontWeight: "bold",
-                   display: "inline",
-                   textGradient: "45deg, #FF5F1F -20%, #FF872A 50%",
-                 }}
-               >
-                 &nbsp; ad revenue.
+               ,&nbsp; we understand the power of social media in today&apos;s
+               digital landscape. Whether you&apos;re looking for help with
+               social media advertising, content creation, or community
+               management, we have the skills and experience to deliver results
+               that matter.
+               <Text>
+                 Our team of experts specializes in creating and executing
+                 effective social media marketing strategies that drive results
+                 for businesses of all sizes.
+               </Text>
+               <Text>
+                 We believe in the value of personalized, data-driven campaigns
+                 that are tailored to the unique needs of our clients. From
+                 increasing brand awareness to boosting sales, we help our
+                 clients achieve their goals by leveraging the latest tools and
+                 technologies in the industry.
+               </Text>
+               <Text>
+                 Trust us to help you make the most of your social media
+                 presence and connect with your audience in a meaningful way.
                </Text>
              </Text>
-           </Fade>
-
-           <Fade top>
-             <Flex direction={"column"}>
-               <br></br>
-               <Text span>
-                 The difficulty is over in a second, the impossible is done
-                 immediately, and miracles take a little longer. All you have to
-                 do is to consider it done.
-               </Text>
-               <Text span>
-                 <br></br>
-                 Book a FREE appointment and we’ll offer you a deal you can’t
-                 refuse.
-               </Text>
-             </Flex>
-           </Fade>
          </Flex>
          <Flex align={"center"}>
-           <Fade top>
              <Image
                width={350}
                height={500}
@@ -106,7 +96,6 @@ const About = () => {
                alt="ads"
                objectFit="contain"
              />
-           </Fade>
          </Flex>
        </Flex>
      </>
