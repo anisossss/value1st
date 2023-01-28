@@ -7,7 +7,7 @@ export const Testimonials = () => {
  
   return (
     <>
-      <Grid.Container gap={4} justify="center">
+      <Grid.Container gap={2} justify="center">
         <Grid xs={12} md={12} css={{ mt: "3em" }} justify="center">
           <Text
             h2
@@ -19,7 +19,7 @@ export const Testimonials = () => {
             Testimonials
           </Text>
         </Grid>
-        <Grid xs md={12} justify="center">
+        <Grid xs={12} md={12} justify="center">
           <Text
             span
             css={{
@@ -45,12 +45,16 @@ export const Testimonials = () => {
         gap={2}
         justify="center"
         css={{
-          px: "$10",
           py: "$10",
         }}
       >
-        <Grid xs md={4}>
-          <Card>
+        <Grid xs={12} md={4}>
+          <Card
+            css={{
+              p: "$10",
+              alignItems: "center",
+            }}
+          >
             <Card.Body>
               <Grid
                 css={{
@@ -98,8 +102,13 @@ export const Testimonials = () => {
             </Card.Body>
           </Card>
         </Grid>
-        <Grid xs md={4}>
-          <Card>
+        <Grid xs={12} md={4}>
+          <Card
+            css={{
+              p: "$10",
+              alignItems: "center",
+            }}
+          >
             <Card.Body>
               <Flex
                 css={{
@@ -146,13 +155,17 @@ export const Testimonials = () => {
             </Card.Body>
           </Card>
         </Grid>
-        <Grid xs md={4}>
-          <Card>
+        <Grid xs={12} md={4}>
+          <Card
+            css={{
+              p: "$10",
+              alignItems: "center",
+            }}
+          >
             <Card.Body>
               <Flex
                 css={{
                   py: "$10",
-                  gap: "$5",
                 }}
               >
                 <QuotesIcon />
