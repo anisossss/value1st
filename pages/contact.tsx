@@ -113,7 +113,7 @@ useEffect(() => {
                 }}
                 className="box"
               >
-                Request a Demo
+                Book a Demo
               </Button>
             {showMessage ? (
               <Grid

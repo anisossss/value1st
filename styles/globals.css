@@ -106,7 +106,7 @@ body {
 
 .box {
 	background: linear-gradient(to right, #FF5F1F, #FF872A);
-	color: white;
+	color: rgb(2, 2, 2);
 	--width: 200px;
 	--height: calc(var(--width) / 3);
 	width: var(--width);
