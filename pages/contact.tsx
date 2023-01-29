@@ -106,29 +106,6 @@ useEffect(() => {
             xs={12}
             css={{ margin: "auto", pb: "$4", width: "42em" }}
           >
-            {" "}
-            <form onSubmit={handleSubmit} className="form">
-              <Input
-                clearable
-                bordered
-                fullWidth
-                size="lg"
-                placeholder="Email"
-                required
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
-              />
-
-              <Input
-                clearable
-                bordered
-                fullWidth
-                size="lg"
-                placeholder="Subject"
-                required
-                value={project}
-                onChange={(e) => setProject(e.target.value)}
-              />
               <Button
                 type="submit"
                 css={{
@@ -136,9 +113,8 @@ useEffect(() => {
                 }}
                 className="box"
               >
-                Send
+                Request a Demo
               </Button>
-            </form>
             {showMessage ? (
               <Grid
                 css={{
