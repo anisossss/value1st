@@ -106,15 +106,20 @@ useEffect(() => {
             xs={12}
             css={{ margin: "auto", pb: "$4", width: "42em" }}
           >
-              <Button
-                type="submit"
-                css={{
-                  margin: "auto",
-                }}
-                className="box"
-              >
-                Book a Demo
-              </Button>
+            <Link href="https://calendly.com/value1st/demo">
+              <a  target="_blank" rel="noopener noreferrer">
+                <Button
+                  type="submit"
+                  css={{
+                    margin: "auto",
+                  }}
+                  className="box"
+                >
+                  Book a Demo
+                </Button>
+              </a>
+            </Link>
+
             {showMessage ? (
               <Grid
                 css={{
