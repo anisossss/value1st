@@ -25,7 +25,7 @@ body {
   transition: all 0.2s;
   font-weight: 500;
   border: none;
-  color: rgb(249, 249, 249);
+  color: rgb(16, 16, 16);
   background: linear-gradient(-75deg, #FF5F1F,  #FF872A);
   -webkit-animation: anime 16s linear infinite;
           animation: anime 16s linear infinite;
@@ -39,7 +39,7 @@ body {
   transition: all 0.2s;
   font-weight: 500;
   border: none;
-  color: rgb(249, 249, 249);
+  color: rgb(16, 16, 16);
   background: linear-gradient(-75deg, #FF5F1F,  #FF872A);
   -webkit-animation: anime 16s linear infinite;
           animation: anime 16s linear infinite;
