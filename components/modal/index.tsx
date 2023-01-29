@@ -10,7 +10,7 @@ import {
   Grid,
 } from "@nextui-org/react";
 import axios from "axios";
-
+import Link from "next/link";
 export const ModalLogin = () => {
 const [flashMessage, setFlashMessage] = useState("");
 const [showMessage, setShowMessage] = useState(false);
@@ -46,10 +46,14 @@ const [showMessage, setShowMessage] = useState(false);
     }
   }, [showMessage]);
   return (
-    <div>
-      <Navbar.Link className="btnn" onClick={handler}>
-        Book a demo
-      </Navbar.Link>
+    <Grid>
+      {/* onClick={handler} */}
+      <Link href="https://calendly.com/value1st/demo">
+        <a className="btnn" target="_blank" rel="noopener noreferrer">
+          Book a demo
+        </a>
+      </Link>
+
       <Modal
         closeButton
         blur
@@ -109,7 +113,7 @@ const [showMessage, setShowMessage] = useState(false);
         {showMessage ? (
           <Grid
             css={{
-              fontWeight:'bold',
+              fontWeight: "bold",
               textGradient: "45deg, #23ff1f -20%, #1fff53 50%",
               padding: "1em",
             }}
@@ -118,6 +122,6 @@ const [showMessage, setShowMessage] = useState(false);
           </Grid>
         ) : null}
       </Modal>
-    </div>
+    </Grid>
   );
 };

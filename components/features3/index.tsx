@@ -32,16 +32,7 @@ export const Features3 = () => {
            >
              VALUE1ST
            </Text>
-           <Text
-             span
-             css={{
-               maxWidth: "800px",
-               color: "$accents8",
-               textAlign: "center",
-             }}
-           >
-             An analysis of the history of your business.
-           </Text>
+          
          </Flex>
          <Flex
            align={"center"}
